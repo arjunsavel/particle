@@ -1,0 +1,13 @@
+# testing-tutorial
+language: python
+python:
+  - "3.6"      # try adding other python versions!
+# command to install dependencies
+install:
+  - pip install -r requirements.txt
+  - pip install codecov
+# command to run tests
+script:
+  - coverage run -m unittest discover
+# after_success:
+#   - bash <(curl -s https://codecov.io/bash) -t YOUR_TOKEN_HERE
